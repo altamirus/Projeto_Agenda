@@ -9,7 +9,7 @@ Inicia o Projeto Django
       django-admin startproject project .
 
 
-Configurar o Git
+Configurar o Git.
 
 
       git config --global user.name 'Seu nome'
