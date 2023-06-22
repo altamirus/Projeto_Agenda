@@ -1,4 +1,3 @@
-# Projeto_Agenda
 # Iniciar o projeto Django
 
 ```
