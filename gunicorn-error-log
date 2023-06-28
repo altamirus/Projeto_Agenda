@@ -1,0 +1,409 @@
+[2023-06-28 03:43:48 +0000] [1666] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['unix:/run/agenda.socket']
+  backlog: 2048
+  workers: 6
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/altamirus/agendaapp
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: -
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/altamirus/agendaapp/gunicorn-error-log
+  loglevel: debug
+  capture_output: True
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: True
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: project.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f90a7ce0c20>
+  on_reload: <function OnReload.on_reload at 0x7f90a7ce0d60>
+  when_ready: <function WhenReady.when_ready at 0x7f90a7ce0ea0>
+  pre_fork: <function Prefork.pre_fork at 0x7f90a7ce0fe0>
+  post_fork: <function Postfork.post_fork at 0x7f90a7ce1120>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f90a7ce1260>
+  worker_int: <function WorkerInt.worker_int at 0x7f90a7ce13a0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f90a7ce14e0>
+  pre_exec: <function PreExec.pre_exec at 0x7f90a7ce1620>
+  pre_request: <function PreRequest.pre_request at 0x7f90a7ce1760>
+  post_request: <function PostRequest.post_request at 0x7f90a7ce1800>
+  child_exit: <function ChildExit.child_exit at 0x7f90a7ce1940>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f90a7ce1a80>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f90a7ce1bc0>
+  on_exit: <function OnExit.on_exit at 0x7f90a7ce1d00>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2023-06-28 03:43:48 +0000] [1666] [INFO] Starting gunicorn 20.1.0
+[2023-06-28 03:43:48 +0000] [1666] [DEBUG] Arbiter booted
+[2023-06-28 03:43:48 +0000] [1666] [INFO] Listening at: unix:/run/agenda.socket (1666)
+[2023-06-28 03:43:48 +0000] [1666] [INFO] Using worker: sync
+[2023-06-28 03:43:48 +0000] [1667] [INFO] Booting worker with pid: 1667
+[2023-06-28 03:43:48 +0000] [1668] [INFO] Booting worker with pid: 1668
+[2023-06-28 03:43:48 +0000] [1669] [INFO] Booting worker with pid: 1669
+[2023-06-28 03:43:48 +0000] [1670] [INFO] Booting worker with pid: 1670
+[2023-06-28 03:43:48 +0000] [1671] [INFO] Booting worker with pid: 1671
+[2023-06-28 03:43:48 +0000] [1672] [INFO] Booting worker with pid: 1672
+[2023-06-28 03:43:48 +0000] [1666] [DEBUG] 6 workers
+[2023-06-28 00:43:51 -0300] [1667] [DEBUG] GET /
+Invalid HTTP_HOST header: 'localhost'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/altamirus/agendaapp/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/altamirus/agendaapp/venv/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/altamirus/agendaapp/venv/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/altamirus/agendaapp/venv/lib/python3.11/site-packages/django/http/request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Bad Request: /
+ - - [28/Jun/2023:00:43:51 -0300] "GET / HTTP/1.1" 400 57812 "-" "curl/7.81.0"
+[2023-06-28 00:57:44 -0300] [1671] [DEBUG] GET /
+ - - [28/Jun/2023:00:57:44 -0300] "GET / HTTP/1.1" 200 1198 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.15"
+[2023-06-28 00:58:11 -0300] [1672] [DEBUG] GET /
+ - - [28/Jun/2023:00:58:11 -0300] "GET / HTTP/1.1" 200 1198 "http://100.65.254.191/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.15"
+[2023-06-28 00:58:13 -0300] [1670] [DEBUG] GET /user/login/
+ - - [28/Jun/2023:00:58:13 -0300] "GET /user/login/ HTTP/1.1" 200 2074 "http://100.65.254.191/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.15"
+[2023-06-28 00:58:15 -0300] [1672] [DEBUG] GET /user/create/
+ - - [28/Jun/2023:00:58:15 -0300] "GET /user/create/ HTTP/1.1" 200 3550 "http://100.65.254.191/user/login/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.15"
+[2023-06-28 01:01:24 -0300] [1669] [DEBUG] GET /user/create/
+ - - [28/Jun/2023:01:01:24 -0300] "GET /user/create/ HTTP/1.1" 200 3550 "http://100.65.254.191/user/login/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.15"
+[2023-06-28 01:01:25 -0300] [1668] [DEBUG] GET /user/create/
+ - - [28/Jun/2023:01:01:25 -0300] "GET /user/create/ HTTP/1.1" 200 3550 "http://100.65.254.191/user/login/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.15"
+[2023-06-28 01:02:24 -0300] [1667] [INFO] Worker exiting (pid: 1667)
+[2023-06-28 01:02:24 -0300] [1668] [INFO] Worker exiting (pid: 1668)
+[2023-06-28 01:02:24 -0300] [1669] [INFO] Worker exiting (pid: 1669)
+[2023-06-28 01:02:24 -0300] [1670] [INFO] Worker exiting (pid: 1670)
+[2023-06-28 01:02:24 -0300] [1671] [INFO] Worker exiting (pid: 1671)
+[2023-06-28 01:02:24 -0300] [1672] [INFO] Worker exiting (pid: 1672)
+[2023-06-28 04:02:24 +0000] [1666] [INFO] Handling signal: term
+[2023-06-28 04:02:24 +0000] [1666] [WARNING] Worker with pid 1671 was terminated due to signal 15
+[2023-06-28 04:02:24 +0000] [1666] [WARNING] Worker with pid 1670 was terminated due to signal 15
+[2023-06-28 04:02:24 +0000] [1666] [WARNING] Worker with pid 1672 was terminated due to signal 15
+[2023-06-28 04:02:24 +0000] [1666] [WARNING] Worker with pid 1667 was terminated due to signal 15
+[2023-06-28 04:02:24 +0000] [1666] [WARNING] Worker with pid 1669 was terminated due to signal 15
+[2023-06-28 04:02:24 +0000] [1666] [WARNING] Worker with pid 1668 was terminated due to signal 15
+[2023-06-28 04:02:24 +0000] [1666] [INFO] Shutting down: Master
+[2023-06-28 04:02:25 +0000] [1825] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['unix:/run/agenda.socket']
+  backlog: 2048
+  workers: 6
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/altamirus/agendaapp
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: -
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/altamirus/agendaapp/gunicorn-error-log
+  loglevel: debug
+  capture_output: True
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: True
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: project.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fd685970c20>
+  on_reload: <function OnReload.on_reload at 0x7fd685970d60>
+  when_ready: <function WhenReady.when_ready at 0x7fd685970ea0>
+  pre_fork: <function Prefork.pre_fork at 0x7fd685970fe0>
+  post_fork: <function Postfork.post_fork at 0x7fd685971120>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fd685971260>
+  worker_int: <function WorkerInt.worker_int at 0x7fd6859713a0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fd6859714e0>
+  pre_exec: <function PreExec.pre_exec at 0x7fd685971620>
+  pre_request: <function PreRequest.pre_request at 0x7fd685971760>
+  post_request: <function PostRequest.post_request at 0x7fd685971800>
+  child_exit: <function ChildExit.child_exit at 0x7fd685971940>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fd685971a80>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fd685971bc0>
+  on_exit: <function OnExit.on_exit at 0x7fd685971d00>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2023-06-28 04:02:25 +0000] [1825] [INFO] Starting gunicorn 20.1.0
+[2023-06-28 04:02:25 +0000] [1825] [DEBUG] Arbiter booted
+[2023-06-28 04:02:25 +0000] [1825] [INFO] Listening at: unix:/run/agenda.socket (1825)
+[2023-06-28 04:02:25 +0000] [1825] [INFO] Using worker: sync
+[2023-06-28 04:02:25 +0000] [1826] [INFO] Booting worker with pid: 1826
+[2023-06-28 04:02:25 +0000] [1827] [INFO] Booting worker with pid: 1827
+[2023-06-28 04:02:25 +0000] [1828] [INFO] Booting worker with pid: 1828
+[2023-06-28 04:02:25 +0000] [1829] [INFO] Booting worker with pid: 1829
+[2023-06-28 04:02:25 +0000] [1830] [INFO] Booting worker with pid: 1830
+[2023-06-28 04:02:25 +0000] [1831] [INFO] Booting worker with pid: 1831
+[2023-06-28 04:02:25 +0000] [1825] [DEBUG] 6 workers
+[2023-06-28 01:02:28 -0300] [1831] [DEBUG] GET /user/create/
+ - - [28/Jun/2023:01:02:28 -0300] "GET /user/create/ HTTP/1.1" 200 3550 "http://100.65.254.191/user/login/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.15"
+[2023-06-28 01:02:30 -0300] [1830] [DEBUG] GET /user/create/
+ - - [28/Jun/2023:01:02:30 -0300] "GET /user/create/ HTTP/1.1" 200 3550 "http://100.65.254.191/user/login/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.15"
+[2023-06-28 01:02:31 -0300] [1831] [DEBUG] GET /user/create/
+ - - [28/Jun/2023:01:02:31 -0300] "GET /user/create/ HTTP/1.1" 200 3550 "http://100.65.254.191/user/login/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.15"
+[2023-06-28 01:03:29 -0300] [1829] [DEBUG] GET /user/create/
+ - - [28/Jun/2023:01:03:29 -0300] "GET /user/create/ HTTP/1.1" 200 3550 "http://100.65.254.191/user/login/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.15"
+[2023-06-28 01:03:31 -0300] [1828] [DEBUG] GET /
+ - - [28/Jun/2023:01:03:31 -0300] "GET / HTTP/1.1" 200 8185 "http://100.65.254.191/user/create/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.15"
+[2023-06-28 01:03:35 -0300] [1831] [DEBUG] GET /
+ - - [28/Jun/2023:01:03:35 -0300] "GET / HTTP/1.1" 200 8185 "http://100.65.254.191/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.15"
+[2023-06-28 01:15:26 -0300] [1831] [DEBUG] GET /contact/1000/
+ - - [28/Jun/2023:01:15:26 -0300] "GET /contact/1000/ HTTP/1.1" 200 1491 "http://100.65.254.191/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.15"
+[2023-06-28 01:15:31 -0300] [1828] [DEBUG] GET /
+ - - [28/Jun/2023:01:15:31 -0300] "GET / HTTP/1.1" 200 8185 "http://100.65.254.191/contact/1000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.15"
+[2023-06-28 01:15:33 -0300] [1830] [DEBUG] GET /contact/992/
+ - - [28/Jun/2023:01:15:33 -0300] "GET /contact/992/ HTTP/1.1" 200 1509 "http://100.65.254.191/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.15"
+[2023-06-28 01:15:35 -0300] [1828] [DEBUG] GET /
+ - - [28/Jun/2023:01:15:35 -0300] "GET / HTTP/1.1" 200 8185 "http://100.65.254.191/contact/992/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.15"
+[2023-06-28 01:15:37 -0300] [1829] [DEBUG] GET /contact/995/
+ - - [28/Jun/2023:01:15:37 -0300] "GET /contact/995/ HTTP/1.1" 200 1481 "http://100.65.254.191/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.15"
+[2023-06-28 01:15:39 -0300] [1828] [DEBUG] GET /
+ - - [28/Jun/2023:01:15:39 -0300] "GET / HTTP/1.1" 200 8185 "http://100.65.254.191/contact/995/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.15"
+[2023-06-28 01:15:41 -0300] [1830] [DEBUG] GET /user/create/
+ - - [28/Jun/2023:01:15:41 -0300] "GET /user/create/ HTTP/1.1" 200 3550 "http://100.65.254.191/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.15"
+[2023-06-28 01:15:52 -0300] [1831] [DEBUG] GET /
+ - - [28/Jun/2023:01:15:52 -0300] "GET / HTTP/1.1" 200 8185 "http://100.65.254.191/user/create/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.15"
+[2023-06-28 09:38:28 -0300] [1827] [DEBUG] GET /
+ - - [28/Jun/2023:09:38:28 -0300] "GET / HTTP/1.1" 200 8185 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+[2023-06-28 09:38:28 -0300] [1826] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+ - - [28/Jun/2023:09:38:28 -0300] "GET /favicon.ico HTTP/1.1" 404 4166 "http://100.65.254.191/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+[2023-06-28 13:38:57 +0000] [856] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['unix:/run/agenda.socket']
+  backlog: 2048
+  workers: 6
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/altamirus/agendaapp
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: -
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/altamirus/agendaapp/gunicorn-error-log
+  loglevel: debug
+  capture_output: True
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: True
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: project.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f11ff4e0c20>
+  on_reload: <function OnReload.on_reload at 0x7f11ff4e0d60>
+  when_ready: <function WhenReady.when_ready at 0x7f11ff4e0ea0>
+  pre_fork: <function Prefork.pre_fork at 0x7f11ff4e0fe0>
+  post_fork: <function Postfork.post_fork at 0x7f11ff4e1120>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f11ff4e1260>
+  worker_int: <function WorkerInt.worker_int at 0x7f11ff4e13a0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f11ff4e14e0>
+  pre_exec: <function PreExec.pre_exec at 0x7f11ff4e1620>
+  pre_request: <function PreRequest.pre_request at 0x7f11ff4e1760>
+  post_request: <function PostRequest.post_request at 0x7f11ff4e1800>
+  child_exit: <function ChildExit.child_exit at 0x7f11ff4e1940>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f11ff4e1a80>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f11ff4e1bc0>
+  on_exit: <function OnExit.on_exit at 0x7f11ff4e1d00>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2023-06-28 13:38:57 +0000] [856] [INFO] Starting gunicorn 20.1.0
+[2023-06-28 13:38:57 +0000] [856] [DEBUG] Arbiter booted
+[2023-06-28 13:38:57 +0000] [856] [INFO] Listening at: unix:/run/agenda.socket (856)
+[2023-06-28 13:38:57 +0000] [856] [INFO] Using worker: sync
+[2023-06-28 13:38:57 +0000] [857] [INFO] Booting worker with pid: 857
+[2023-06-28 13:38:57 +0000] [858] [INFO] Booting worker with pid: 858
+[2023-06-28 13:38:57 +0000] [859] [INFO] Booting worker with pid: 859
+[2023-06-28 13:38:57 +0000] [860] [INFO] Booting worker with pid: 860
+[2023-06-28 13:38:57 +0000] [861] [INFO] Booting worker with pid: 861
+[2023-06-28 13:38:57 +0000] [862] [INFO] Booting worker with pid: 862
+[2023-06-28 13:38:57 +0000] [856] [DEBUG] 6 workers
+[2023-06-28 10:39:00 -0300] [862] [DEBUG] GET /
+ - - [28/Jun/2023:10:39:00 -0300] "GET / HTTP/1.1" 200 8185 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+[2023-06-28 10:48:50 -0300] [862] [DEBUG] GET /
+ - - [28/Jun/2023:10:48:50 -0300] "GET / HTTP/1.1" 200 8185 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+[2023-06-28 10:48:51 -0300] [858] [DEBUG] GET /
+ - - [28/Jun/2023:10:48:51 -0300] "GET / HTTP/1.1" 200 8185 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+[2023-06-28 10:48:52 -0300] [860] [DEBUG] GET /
+ - - [28/Jun/2023:10:48:52 -0300] "GET / HTTP/1.1" 200 8185 "http://100.65.254.191/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+[2023-06-28 10:48:53 -0300] [858] [DEBUG] GET /user/login/
+ - - [28/Jun/2023:10:48:53 -0300] "GET /user/login/ HTTP/1.1" 200 2074 "http://100.65.254.191/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+[2023-06-28 10:48:54 -0300] [860] [DEBUG] GET /user/create/
+ - - [28/Jun/2023:10:48:54 -0300] "GET /user/create/ HTTP/1.1" 200 3550 "http://100.65.254.191/user/login/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+[2023-06-28 10:48:56 -0300] [861] [DEBUG] GET /user/login/
+ - - [28/Jun/2023:10:48:56 -0300] "GET /user/login/ HTTP/1.1" 200 2074 "http://100.65.254.191/user/create/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+[2023-06-28 10:48:59 -0300] [858] [DEBUG] GET /user/login/
+ - - [28/Jun/2023:10:48:59 -0300] "GET /user/login/ HTTP/1.1" 200 2074 "http://100.65.254.191/user/create/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+[2023-06-28 10:48:59 -0300] [857] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+ - - [28/Jun/2023:10:48:59 -0300] "GET /favicon.ico HTTP/1.1" 404 4166 "http://100.65.254.191/user/login/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+[2023-06-28 10:49:00 -0300] [858] [DEBUG] GET /user/login/
+ - - [28/Jun/2023:10:49:00 -0300] "GET /user/login/ HTTP/1.1" 200 2074 "http://100.65.254.191/user/create/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+[2023-06-28 10:49:00 -0300] [861] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+ - - [28/Jun/2023:10:49:00 -0300] "GET /favicon.ico HTTP/1.1" 404 4166 "http://100.65.254.191/user/login/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+[2023-06-28 10:49:01 -0300] [858] [DEBUG] GET /user/login/
+ - - [28/Jun/2023:10:49:01 -0300] "GET /user/login/ HTTP/1.1" 200 2074 "http://100.65.254.191/user/create/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+[2023-06-28 10:49:01 -0300] [857] [DEBUG] GET /user/login/
+ - - [28/Jun/2023:10:49:01 -0300] "GET /user/login/ HTTP/1.1" 200 2074 "http://100.65.254.191/user/create/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+[2023-06-28 10:49:08 -0300] [858] [DEBUG] GET /
+ - - [28/Jun/2023:10:49:08 -0300] "GET / HTTP/1.1" 200 8185 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.15"
+[2023-06-28 10:49:11 -0300] [862] [DEBUG] GET /user/create/
+ - - [28/Jun/2023:10:49:11 -0300] "GET /user/create/ HTTP/1.1" 200 3550 "http://100.65.254.191/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.15"
+[2023-06-28 12:15:36 -0300] [857] [DEBUG] GET /
+ - - [28/Jun/2023:12:15:36 -0300] "GET / HTTP/1.1" 200 8185 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+[2023-06-28 12:15:37 -0300] [861] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+ - - [28/Jun/2023:12:15:37 -0300] "GET /favicon.ico HTTP/1.1" 404 4166 "http://100.65.254.191/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+[2023-06-28 14:43:31 -0300] [857] [DEBUG] GET /
+ - - [28/Jun/2023:14:43:31 -0300] "GET / HTTP/1.1" 200 8185 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+[2023-06-28 14:43:32 -0300] [861] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+ - - [28/Jun/2023:14:43:32 -0300] "GET /favicon.ico HTTP/1.1" 404 4166 "http://100.65.254.191/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
